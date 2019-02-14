@@ -3,7 +3,7 @@
  */
 import Categories from '../pages/Categories';
 import Items from '../pages/Items';
-import {ReportForm, ReportItems} from '../pages/Report';
+import Report from '../pages/Report'
 
 
 const routes = [
@@ -22,14 +22,8 @@ const routes = [
     {
         isExact: true,
         path: '/reports',
-        name: 'Reports',
-        component: ReportItems
-    },
-    {
-        isExact: true,
-        path: '/reports/create',
         name: 'Create Report',
-        component: ReportForm
+        component: Report
     }
 ]
 
