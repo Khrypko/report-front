@@ -1,11 +1,6 @@
-/**
- * Created by Maks on 31.01.2019.
- */
-
-
-import ReportForm from './ReportForm'
-import ReportItems from './ReportItems'
+import ReportForm from '../../components/Report/ReportForm';
+import ReportItems from '../../components/Report/ReportItems';
 
 
 
-export {ReportItems, ReportForm};
+export { ReportItems, ReportForm };
