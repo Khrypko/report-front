@@ -1,0 +1,40 @@
+.tree {
+  width: 100%;
+}
+
+.tree-branch {
+}
+
+.tree-leave {
+  margin-bottom: 20px;
+  padding: 5px;
+  padding-right: 0;
+}
+.tree-leave span {
+  display: block;
+  border: 3px solid #ccc;
+  padding: 5px;
+  padding-right: 0;
+}
+.tree-leave:last-child {
+  margin-bottom: 0;
+}
+
+.tree-leave > .tree-branch {
+  padding: 5px;
+  padding-right: 0;
+  margin: 5px;
+  margin-right: 0;
+  margin-left: 20px;
+}
+.tree-branch > .tree-leave {
+  margin-bottom: 5px;
+}
+
+.tree-branch > .tree-leave:last-child {
+  margin-bottom: 0;
+}
+
+.tree-leave>span.is-item-over {
+  background-color: #ccc;
+}
