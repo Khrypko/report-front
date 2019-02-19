@@ -1,6 +1,3 @@
-/**
- * Created by Maks on 28.01.2019.
- */
 class ApiCategories {
     _baseUrl = 'http://localhost:8080/api';
 

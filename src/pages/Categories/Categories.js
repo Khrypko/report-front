@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ApiCategories from '../../services/Categories';
-import Modal from '../../components/Modal';
+import ApiCategories from 'services/Categories';
+import Modal from 'components/Modal';
 
 class Categories extends Component {
     _apiCategories = new ApiCategories();

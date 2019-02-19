@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Tree from '../../components/Tree';
-import Search from '../../components/Search';
+import Tree from 'components/Tree';
+import Search from 'components/Search';
 
 export default class Report extends Component {
     render() {
