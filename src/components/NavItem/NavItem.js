@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 
-export default class NavItem extends Component {
-
+class NavItem extends Component {
 
     render() {
-        const { name, path } = this.props.item;
+        const { item, location } = this.props;
+        const { name, path } = item;
         return (
-            <li key={name}>
+            <li className={item.path === location.pathname ? 'active' : null}>
                 <NavLink
                     activeClassName="active"
                     data-toggle="tab"
@@ -20,3 +22,14 @@ export default class NavItem extends Component {
         )
     }
 }
+
+NavLink.propTypes = {
+    item: PropTypes.object,
+    match: PropTypes.object,
+    location: PropTypes.object,
+    history: PropTypes.object
+};
+
+export default withRouter(NavItem);
+
+

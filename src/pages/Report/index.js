@@ -5,17 +5,9 @@ import Search from 'components/Search';
 export default class Report extends Component {
     render() {
         return (
-            <div className="row">
-                <div className=" col-sm-9">
-                    <div className="l-report">
-                        <Tree />
-                    </div>
-                </div>
-                <div className="l-report col-sm-3">
-                    <div className="l-report">
-                        <Search />
-                    </div>
-                </div>
+            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mg-t-30">
+                <Tree />
+                <Search />
             </div>
         )
     }

@@ -6,7 +6,7 @@ import routes from 'routes';
 class Header extends Component {
 
     renderLinks = (items) => {
-        return items.map((item) => <NavItem item={item} />)
+        return items.map((item) => <NavItem key={item.name} item={item} />)
     }
     componentDidMount() {
         console.log(this.context.router);

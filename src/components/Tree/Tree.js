@@ -76,6 +76,19 @@ class Tree extends Component {
 export default Tree;
 
 function addChildToLeaf(id, data, state) {
+
+  function findIt(leaf, id) {
+    let result;
+    if (leaf.id === id) return leaf;
+    if (leaf.childs.length) {
+      for (let i = 0; i < leaf.childs.length; i++) {
+        result = findIt(leaf.childs[i], id);
+        if (result) return result;
+      }
+    }
+    return null;
+  }
+
   const newStateElements = [...state.tree.elements];
   let result = null;
   for (let i = 0; i < newStateElements.length; i++) {
@@ -88,14 +101,4 @@ function addChildToLeaf(id, data, state) {
   return newStateElements;
 }
 
-function findIt(leaf, id) {
-  let result;
-  if (leaf.id === id) return leaf;
-  if (leaf.childs.length) {
-    for (let i = 0; i < leaf.childs.length; i++) {
-      result = findIt(leaf.childs[i], id);
-      if (result) return result;
-    }
-  }
-  return null;
-}
+

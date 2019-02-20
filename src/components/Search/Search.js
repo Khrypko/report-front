@@ -32,12 +32,12 @@ class Search extends React.Component {
     return (
       <div className="search-wrapper">
         <div className="search">
-          <span>search:</span>
           <input
             onChange={this.getInput}
             value={this.state.input}
             type="text"
-            className="search-input"
+            className="search-input form-control"
+            placeholder="Search for items..."
           />
         </div>
         <div className="search-results">{this.renderResults()}</div>
