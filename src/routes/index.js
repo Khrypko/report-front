@@ -1,9 +1,6 @@
-/**
- * Created by Maks on 27.01.2019.
- */
-import Categories from '../pages/Categories';
-import Items from '../pages/Items';
-import Report from '../pages/Report'
+import Categories from 'pages/Categories';
+import Items from 'pages/Items';
+import Report from 'pages/Report';
 
 
 const routes = [

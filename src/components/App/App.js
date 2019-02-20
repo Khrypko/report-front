@@ -17,7 +17,7 @@ class App extends Component {
                         {routes.map(({ component, path, name, isExact }) => <Route path={path} exact={isExact} component={component} key={name} />)}
                     </div>
                 </div>
-            </Router>
+            </Router >
         )
     }
 }

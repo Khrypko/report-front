@@ -17,16 +17,16 @@ class Modal extends Component {
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title">Modal title</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={toggleModal}>
                                 <span aria-hidden="true">&times;</span>
                             </button>
+                            <h5 className="modal-title">Adding a category</h5>
                         </div>
                         <div className="modal-body">
                             <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Email address</label>
-                                <input onChange={this.getName} value={this.state.name} type="email" className="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                <label htmlFor="exampleInputEmail1">Category name</label>
+                                <input onChange={this.getName} value={this.state.name} type="email" className="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter category name" />
+                                <small id="emailHelp" className="form-text text-muted">enter the category name in the box above</small>
                             </div>
                         </div>
                         <div className="modal-footer">
