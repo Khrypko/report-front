@@ -1,0 +1,6 @@
+{
+    "/api/category/template/:id": "/categories?id=:id",
+    "/api/category/template": "/categories",
+    "/api/items/template/:id": "/items?id=:id",
+    "/api/items/template": "/items"
+}
