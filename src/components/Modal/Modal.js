@@ -9,7 +9,7 @@ class Modal extends Component {
     getName = (e) => this.setState({ name: e.target.value });
 
     render() {
-        const { toggleModal, postCategory } = this.props;
+        const { toggleModal, postCategory, title } = this.props;
         const { name } = this.state;
         const categoryData = { name };
         return (
@@ -20,13 +20,13 @@ class Modal extends Component {
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={toggleModal}>
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h5 className="modal-title">Adding a category</h5>
+                            <h5 className="modal-title">Adding a {title}</h5>
                         </div>
                         <div className="modal-body">
                             <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Category name</label>
-                                <input onChange={this.getName} value={this.state.name} type="email" className="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter category name" />
-                                <small id="emailHelp" className="form-text text-muted">enter the category name in the box above</small>
+                                <label htmlFor="exampleInputEmail1">{title} name</label>
+                                <input onChange={this.getName} value={this.state.name} type="email" className="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" />
+                                <small id="emailHelp" className="form-text text-muted">enter the {title} name in the box above</small>
                             </div>
                         </div>
                         <div className="modal-footer">

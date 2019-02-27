@@ -38,7 +38,7 @@ class Categories extends Component {
 
         return (
             <div className="row">
-                {modalOpen ? <Modal toggleModal={toggleModal} postCategory={postCategory} /> : null}
+                {modalOpen ? <Modal toggleModal={toggleModal} postCategory={postCategory} title="category"/> : null}
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <button className="btn btn-primary" onClick={toggleModal}>Add Category</button>
                     <div className="normal-table-list mg-t-30">
