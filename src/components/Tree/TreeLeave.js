@@ -20,7 +20,7 @@ class TreeLeave extends React.Component {
 
   render() {
     const {
-      leave: { title, childs },
+      leave: { name, childs },
       renderElements
     } = this.props;
     console.log(childs);
@@ -31,7 +31,8 @@ class TreeLeave extends React.Component {
         onDragLeave={this.dragLeave}
         onDrop={this.dragDrop}
       >
-        <span>{title}</span>
+
+        <span>{name}</span>
         {childs.length ? renderElements(childs) : null}
       </div>
     );

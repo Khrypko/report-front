@@ -4,7 +4,12 @@ class ApiCategories {
     getCategories = async () => {
         const res = await fetch(`${this._baseUrl}/category/template`);
         return res.json();
-    }
+    };
+
+    getCategoriesStartsWith = async (startsWith) => {
+        const res = await fetch(`${this._baseUrl}/category/template?startsWith=${startsWith}`);
+        return res.json();
+    };
 
     addCategory = async (category) => {
         const res = await fetch(`${this._baseUrl}/category/template`, {

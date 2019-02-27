@@ -8,28 +8,28 @@ import TreeLeave from "./TreeLeave";
 class Tree extends Component {
   state = {
     tree: {
-      title: "Income",
+      name: "Income",
       elements: [
         {
           id: 1,
-          title: "test",
+          name: "test",
           childs: [
-            { id: 12, title: "test", childs: [] },
+            { id: 12, name: "test", childs: [] },
             {
               id: 123,
-              title: "test",
+              name: "test",
               childs: [
-                { id: 1234, title: "test", childs: [] },
-                { id: 12345, title: "test", childs: [] },
-                { id: 123456, title: "test", childs: [] }
+                { id: 1234, name: "test", childs: [] },
+                { id: 12345, name: "test", childs: [] },
+                { id: 123456, name: "test", childs: [] }
               ]
             },
-            { id: 1234567, title: "test", childs: [] }
+            { id: 1234567, name: "test", childs: [] }
           ]
         },
-        { id: 12345678, title: "test1", childs: [] },
-        { id: 1623674, title: "test2", childs: [] },
-        { id: 18467975, title: "test3", childs: [] }
+        { id: 12345678, name: "test1", childs: [] },
+        { id: 1623674, name: "test2", childs: [] },
+        { id: 18467975, name: "test3", childs: [] }
       ]
     }
   };
@@ -40,7 +40,7 @@ class Tree extends Component {
 
   setChild = (data, id) => {
     const elements = addChildToLeaf(id, data, this.state);
-    this.setState({ tree: { title: this.state.tree.title, elements: elements } });
+    this.setState({ tree: { name: this.state.tree.name, elements: elements } });
   };
 
   renderElements = elements => {
@@ -62,11 +62,11 @@ class Tree extends Component {
 
   render() {
     const {
-      tree: { title, elements }
+      tree: { name, elements }
     } = this.state;
     return (
       <div className="tree">
-        <h1>{title}</h1>
+        <h1>{name}</h1>
         {this.renderElements(elements)}
       </div>
     );
